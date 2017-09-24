@@ -1,0 +1,14 @@
+resolver: nightly-2017-09-20
+packages:
+  - location: .
+  - location: https://github.com/jgm/pandoc-types/archive/10dd48e234c51433033eb1ec531fe7a5f7889cad.zip
+    extra-dep: true
+  - location: https://github.com/jgm/pandoc/archive/438193197d08239a954c95328359a4597f3feab9.zip
+    extra-dep: true
+  - location: https://github.com/TerrorJack/nodejs-eval/archive/a8a4e5eb08236b3866378383677648ac1da206f7.zip
+    subdirs:
+      - nodejs-eval
+    extra-dep: true
+extra-deps:
+  - cmark-gfm-0.1.3
+  - haddock-library-1.4.3

@@ -1,0 +1,39 @@
+name: hitomi
+version: 0.0.1
+stability: alpha
+maintainer: Shao Cheng <astrohavoc@gmail.com>
+copyright: (c) 2017 Shao Cheng
+license: BSD3
+github: TerrorJack/hitomi
+
+extra-source-files:
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
+
+custom-setup:
+  dependencies:
+    - base
+    - Cabal
+    - nodejs-eval
+
+dependencies:
+  - aeson
+  - base
+  - nodejs-eval
+  - pandoc
+  - shake
+  - text
+
+ghc-options: -Wall
+
+library:
+  source-dirs: src
+
+executables:
+  hitomi:
+    source-dirs: app
+    main: Main.hs
+    ghc-options: -threaded -with-rtsopts=-N
+    dependencies:
+      - hitomi
