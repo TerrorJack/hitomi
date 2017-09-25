@@ -16,7 +16,8 @@ matrix:
       sudo: false
 
 install:
-  - mkdir -p ~/.local/bin
+  - mkdir -p ~/.local/bin ~/.stack
   - export PATH=~/.local/bin:$PATH
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
-  - stack --no-terminal --install-ghc build --ghc-options -O0 --haddock --haddock-deps
+  - cp config.yaml ~/.stack/
+  - stack --no-terminal --install-ghc build --haddock --haddock-deps

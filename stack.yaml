@@ -12,4 +12,3 @@ packages:
 extra-deps:
   - cmark-gfm-0.1.3
   - haddock-library-1.4.3
-apply-ghc-options: everything
