@@ -1,2 +1,2 @@
 ghc-options:
-  pandoc: -W0
+  pandoc: -O0
